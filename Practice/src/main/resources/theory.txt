@@ -1,0 +1,9 @@
+Q. What are the key things you would consider when creating/consuming an API to ensure that it is secure and reliable?
+
+A:->
+	During creating an API we can consider on authentication to ensure that API is secure by multiple way:-
+	
+	     1. JWT (JSON Web Token)
+	     2. Role Based Access Control
+	     3. Use HTTPS method
+	     4. Password encryption
