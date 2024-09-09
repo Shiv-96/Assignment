@@ -1,0 +1,18 @@
+Q1. How will you tackle the challenge above?
+
+A:-  To tackle the challenge we need to focus on multiple point:
+	1. Read the CSV file : Read the data and store them into rows and columns
+	2. Detect values or formula: Check all the data if it contains value then ok and if it contains formula then convert them into values
+	3. Convert to CSV : After converting all the formula into value we will convert that matrix into CSV and return it.
+
+
+Q2. What type of errors you would you check for?
+
+A:- We can check multiple error for example:-
+	1. syntax error: Incorrect formula is given or not eg: =B1+, =C1@C2
+	2. cell exists or not
+	3. Missing data 
+
+Q3. How might a user break your code?
+
+A:- If any error occurs then in that case this code will break.

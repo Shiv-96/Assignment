@@ -2,8 +2,6 @@ package com.csvCalculator.Controller;
 
 import java.io.IOException;
 
-import javax.script.ScriptException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,13 +18,10 @@ public class CSVController {
 
 
     @GetMapping("/process")
-    public String processCSV(@RequestParam String inputPath, @RequestParam String outputPath) {
-        try {
-            csvService.processCSV(inputPath, outputPath);
-            return "CSV processed successfully!";
-        } catch (IOException | ScriptException | CsvValidationException e) {
-            e.printStackTrace();
-            return "Error processing CSV: " + e.getMessage();
-        }
+    public String processCSV(@RequestParam String inputPath, @RequestParam String outputPath) throws CsvValidationException, NumberFormatException, IOException {
+
+        csvService.processCSV(inputPath, outputPath);
+        return "CSV processed successfully!";
+
     }
 }

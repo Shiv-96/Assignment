@@ -6,7 +6,6 @@ import com.opencsv.exceptions.CsvValidationException;
 
 import org.springframework.stereotype.Service;
 
-import javax.script.ScriptException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,7 +16,7 @@ public class CSVService {
 
     public final String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    public void processCSV(String inputPath, String outputPath) throws IOException, ScriptException, CsvValidationException {
+    public void processCSV(String inputPath, String outputPath) throws IOException, CsvValidationException, NumberFormatException {
         CSVReader reader = new CSVReader(new FileReader(inputPath));
         CSVWriter writer = new CSVWriter(new FileWriter(outputPath));
 
